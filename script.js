@@ -50,3 +50,45 @@ function imparPar() {
         imparPar();
     }
 }
+
+function valoresIguais() {
+    let A = parseInt(prompt("Digite um numero:"));
+    let B = parseInt(prompt("Digite um numero:"));
+
+    if ( A === B) {
+        let C = parseInt(prompt("Digite um numero:"));
+        alert ( "A soma de A + B é: " + C);
+
+    } else {
+        let C = A * B;
+        alert("O produto de A * B é: " + C);
+    }
+}
+
+function valorPositivoNegativo() {
+    let num = Number(prompt("Digite um numero, positivo ou negativo :"));
+    if (num < 0) {
+        let resultado = num * 3;
+        alert ("O triplo de " + num + " é: " + resultado);
+    } else { 
+        let resultado = num * 2;
+        alert ("O dobro de " + num + " é: " + resultado);
+    }
+
+}
+
+function valorBooleano() {
+    let valor1 = Boolean(prompt("Digite um valor 1 para true ou 0 para false :"));
+    let valor2 = Boolean(prompt("Digite um valor 1 para true ou 0 para false :"));
+
+    if (valor1 === true && valor2 === true) {
+    alert("Ambos são VERDADEIROS.");
+} else if (valor1 === false && valor2 === false) {
+    alert("Ambos são FALSOS.");
+} else {
+    alert("Os valores são diferentes (um é verdadeiro e o outro é falso).");
+}
+}
+
+
+
