@@ -104,9 +104,9 @@ function lerVariaveis() {
 }
 
 function ordenarDecrescente() {
-    let A = parseInt (prompt("Digite um numero:"));
-    let B = parseInt (prompt("Digite um numero:"));
-    let C = parseInt (prompt("Digite um numero:"));
+    let A = parseInt(prompt("Digite um numero:"));
+    let B = parseInt(prompt("Digite um numero:"));
+    let C = parseInt(prompt("Digite um numero:"));
 
     if (A > B && A > C) {
         if (B > C) {
@@ -127,14 +127,59 @@ function ordenarDecrescente() {
         if (A > B) {
             alert(`${C}, ${A}, ${B}`);
         }
-        else{
+        else {
             alert(`${C}, ${B}, ${A}`);
         }
     }
 }
 
-function pesoIdeal(){
-    let altura = parseInt(prompt("Digite sua altura:"));
-    let sexo = String(prompt("Informe qual o seu genero? 'M' ou 'F'?));
-        
+function pesoIdeal() {
+    let altura = parseFloat(prompt("Digite sua altura: "));
+    let genero = String(prompt("Informe qual o seu genero? 'M' ou 'F'? ").toUpperCase());
+    let pesoIdeal;
+
+    switch (genero) {
+        case "M":
+            pesoIdeal = (72.7 * altura) - 58;
+            break;
+        case "F":
+            pesoIdeal = (62.1 * altura) - 44.7;
+            break;
+        default:
+            alert(" Gênero informado é invalido!");
+            return;
+
+    }
+    alert(`O peso ideal é ${pesoIdeal.toFixed(2)}`);
+
+}
+
+
+function descobrirImc() {
+    let peso = parseFloat(prompt("Digite seu peso:"));
+    let altura = parseFloat(prompt("Digite sua altura:"));
+    const imc = peso / (altura ** 2);
+    let condicao;
+
+    switch (true) {
+        case imc < 18.5:
+            condicao = "Abaixo do peso";
+            break;
+        case imc >= 18.5 && imc < 25:
+            condicao = "Peso normal";
+            break;
+        case imc >= 25 && imc < 30:
+            condicao = " Acima do peso";
+            break;
+        case imc >= 30:
+            condicao = "Obeso";
+            break;
+        default:
+            alert("Impossivel de calcular o IMC! Dados invalido!")
+  
+    }
+    alert(`
+        imc: ${imc.toFixed(2)}
+        condição: ${condicao}
+    `)
 }
