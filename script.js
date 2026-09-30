@@ -55,9 +55,9 @@ function valoresIguais() {
     let A = parseInt(prompt("Digite um numero:"));
     let B = parseInt(prompt("Digite um numero:"));
 
-    if ( A === B) {
+    if (A === B) {
         let C = parseInt(prompt("Digite um numero:"));
-        alert ( "A soma de A + B é: " + C);
+        alert("A soma de A + B é: " + C);
 
     } else {
         let C = A * B;
@@ -69,10 +69,10 @@ function valorPositivoNegativo() {
     let num = Number(prompt("Digite um numero, positivo ou negativo :"));
     if (num < 0) {
         let resultado = num * 3;
-        alert ("O triplo de " + num + " é: " + resultado);
-    } else { 
+        alert("O triplo de " + num + " é: " + resultado);
+    } else {
         let resultado = num * 2;
-        alert ("O dobro de " + num + " é: " + resultado);
+        alert("O dobro de " + num + " é: " + resultado);
     }
 
 }
@@ -82,18 +82,18 @@ function valorBooleano() {
     let valor2 = Boolean(prompt("Digite um valor 1 para true ou 0 para false :"));
 
     if (valor1 === true && valor2 === true) {
-    alert("Ambos são VERDADEIROS.");
-} else if (valor1 === false && valor2 === false) {
-    alert("Ambos são FALSOS.");
-} else {
-    alert("Os valores são diferentes (um é verdadeiro e o outro é falso).");
-}
+        alert("Ambos são VERDADEIROS.");
+    } else if (valor1 === false && valor2 === false) {
+        alert("Ambos são FALSOS.");
+    } else {
+        alert("Os valores são diferentes (um é verdadeiro e o outro é falso).");
+    }
 }
 
 function lerVariaveis() {
     let variavel = Number(prompt("Digite um numero:"));
-    
-    if(variavel %2 === 0) {
+
+    if (variavel % 2 === 0) {
         let soma = variavel + 5;
         alert("A resposta é: " + soma);
     } else {
@@ -103,4 +103,38 @@ function lerVariaveis() {
 
 }
 
-function ordenarDecrescente() {}
+function ordenarDecrescente() {
+    let A = parseInt (prompt("Digite um numero:"));
+    let B = parseInt (prompt("Digite um numero:"));
+    let C = parseInt (prompt("Digite um numero:"));
+
+    if (A > B && A > C) {
+        if (B > C) {
+            alert(`${A}, ${B}, ${C} `);
+        }
+        else {
+            alert(`${A}, ${C},${B}`);
+        }
+    } else if (B > A && B > C) {
+        if (C > A) {
+            alert(`${B}, ${C}, ${A}`);
+        }
+        else {
+            alert(`${B}, ${A}, ${C}`);
+        }
+
+    } else {
+        if (A > B) {
+            alert(`${C}, ${A}, ${B}`);
+        }
+        else{
+            alert(`${C}, ${B}, ${A}`);
+        }
+    }
+}
+
+function pesoIdeal(){
+    let altura = parseInt(prompt("Digite sua altura:"));
+    let sexo = String(prompt("Informe qual o seu genero? 'M' ou 'F'?));
+        
+}
