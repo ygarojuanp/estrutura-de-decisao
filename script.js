@@ -176,10 +176,50 @@ function descobrirImc() {
             break;
         default:
             alert("Impossivel de calcular o IMC! Dados invalido!")
-  
+
     }
     alert(`
         imc: ${imc.toFixed(2)}
         condição: ${condicao}
     `)
 }
+
+function verDesconto() {
+    let preco = parseFloat(prompt("Digite o preço do produto: "));
+    let codigo = parseInt(prompt(`Digite o código da condição de pagamento:
+1 - À vista em dinheiro ou cheque (10% de desconto)
+2 - À vista no cartão de crédito (15% de desconto)
+3 - Em duas vezes, sem juros
+4 - Em duas vezes, com juros de 10%`));
+    let valorFinal;
+
+    switch (codigo) {
+        case 1:
+            valorFinal = preco * 0.9;
+            break;
+
+        case 2:
+            valorFinal = preco * 0.85;
+            break;
+
+        case 3:
+            valorFinal = preco;
+            break;
+
+        case 4:
+            valorFinal = preco * 1.1;
+            break;
+        default:
+            alert("Código informado é invalido");
+            return;
+
+    }
+    let parcelas = codigo >= 3
+    ? alert(`
+        Duas parcelas de R$ ${(valorFinal / 2).toFixed(2)}`)
+    : alert("Total a ser pago: R$ " + valorFinal.toFixed(2));
+
+}
+
+
+function verificarMedia() { }
