@@ -90,5 +90,17 @@ function valorBooleano() {
 }
 }
 
+function lerVariaveis() {
+    let variavel = Number(prompt("Digite um numero:"));
+    
+    if(variavel %2 === 0) {
+        let soma = variavel + 5;
+        alert("A resposta é: " + soma);
+    } else {
+        let soma = variavel + 8;
+        alert("a resposta é: " + soma);
+    }
 
+}
 
+function ordenarDecrescente() {}
